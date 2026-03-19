@@ -1,0 +1,12 @@
+# Node dependencies — never commit these
+node_modules/
+
+# SQLite database file — excluded
+backend/data/tasks.db
+
+# Mac/OS junk files
+.DS_Store
+
+# Environment variable files — never commit secrets
+.env
+.env.local

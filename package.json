@@ -1,0 +1,16 @@
+{
+  "name": "petro-final-project",
+  "version": "1.0.0",
+  "description": "Full-stack CRUD task manager with SQLite, validation, sanitization, and assignment-aligned security controls",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

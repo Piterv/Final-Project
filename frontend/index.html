@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <!-- Sidebar navigation -->
+     
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <a href="#" data-page="dashboard" class="active">Dashboard</a>
+      <a href="#" data-page="tasks">Task Page</a>
+      <a href="#" data-page="completed">Completed Tasks</a>
+      <a href="#" data-page="deleted">Deleted Tasks</a>
+    </aside>
+
+    <!-- Main content -->
+     
+    <main class="main-content">
+      <h1>Task Manager</h1>
+
+
+      <div id="message" class="message" aria-live="polite"></div>
+
+
+      <section id="form-section">
+        <input id="title" placeholder="Subject" maxlength="60">
+        <textarea id="description" placeholder="Body" maxlength="250"></textarea>
+
+        <div class="form-row">
+          <select id="status">
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+
+          <button id="cancelBtn" type="button" class="cancel-btn" style="display:none">Cancel</button>
+
+          <button id="saveBtn" type="button">Save</button>
+        </div>
+      </section>
+
+
+      <div id="stats-section" style="display:none">
+        <div class="stats-grid">
+          <div class="stat-card stat-total">
+            <div class="stat-number" id="stat-total">0</div>
+            <div class="stat-label">Total Tasks</div>
+          </div>
+          <div class="stat-card stat-pending">
+            <div class="stat-number" id="stat-pending">0</div>
+            <div class="stat-label">Pending</div>
+          </div>
+          <div class="stat-card stat-progress">
+            <div class="stat-number" id="stat-progress">0</div>
+            <div class="stat-label">In Progress</div>
+          </div>
+          <div class="stat-card stat-completed">
+            <div class="stat-number" id="stat-completed">0</div>
+            <div class="stat-label">Completed</div>
+          </div>
+          <div class="stat-card stat-deleted">
+            <div class="stat-number" id="stat-deleted">0</div>
+            <div class="stat-label">Deleted</div>
+          </div>
+        </div>
+      </div>
+
+
+      <table id="table"></table>
+    </main>
+
+  </div>
+
+  <!-- Load app.js  -->
+  <script src="app.js"></script>
+</body>
+</html>
